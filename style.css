@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --red: #037c9b;
+    --white: #fff;
+    --dark: #1e1c2a;
+}
+
+body{
+    color: var(--dark);
+    background: var(--white);
+}
+
+html{
+    scroll-behavior: smooth; /* para deixar suave a navegação do site, alguns navegadores aceitam isso. */
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navigation .logo{
+    color: var(--dark);
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+
+.logo span{
+    color: var(--red);
+}
+
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.navigation ul li a:hover{
+    color: var(--red);
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav-menu{
+    margin: 0 20px;
+}
+
+
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--red);
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text{
+    max-width: 37rem;
+}
+
+.home-text .text-h4{
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.home-text .text-h1{
+    color: var(--red);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+.home-text p{
+    margin-bottom: 0.5rem;
+    font-size: 22px;
+}
+
+.home-btn{
+    padding: 15px 45px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.home-btn:hover{
+    background: #181818;
+}
+
+.home-img img{
+    width: 120%;
+    margin-top: 70px;
+    margin-left: 10px;
+    margin-bottom: 70px;
+}
+
+.secao-projeto{
+    margin: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.secao-projeto  h2{
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.projeto-text h2{
+    color: var(--red);
+}
+
+.secao-projeto .projeto-text p{
+    font-size: 22px;
+}
+
+.img-addroom{
+    margin-right: 50px;
+    margin-top: 50px;
+    padding-right: 50px;
+}
+
+footer{
+   background-color: var(--dark);
+   
+}
+
+.footerContainer{
+    width: 100%;
+}
+
+.socialIcons{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialIcons h2{
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.socialIcons a{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2rem;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: var(--red);
+    transition: 0.5s;
+}
+
+.footerBottom{
+    background-color: var(--dark);
+    padding: 20px;
+    text-align: center;
+}
+
+.email{
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navigation ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .navigation.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 0.1rem 0.5rem #ccc;
+    }
+
+    .navigation ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-text {
+        margin-bottom: 20px;
+    }
+
+    .home-img img {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .secao-projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secao-projeto .projeto-text {
+        margin-bottom: 20px;
+    }
+
+    .img-addroom {
+        margin: 0;
+        padding: 0;
+    }
+
+    .socialIcons {
+        flex-direction: column;
+    }
+
+    .socialIcons h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .home {
+        padding: 0 5%;
+    }
+
+    .home-text p {
+        font-size: 18px;
+    }
+
+    .home-text .text-h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-text .text-h4 {
+        font-size: 0.875rem;
+    }
+
+    .home-btn {
+        padding: 10px 30px;
+    }
+
+    .secao-projeto {
+        margin: 10px 20px;
+    }
+
+    .secao-projeto h2 {
+        font-size: 1.5rem;
+    }
+
+    .secao-projeto .projeto-text p {
+        font-size: 18px;
+    }
+
+    .img-addroom img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .socialIcons h2 {
+        font-size: 0.875rem;
+    }
+
+    .socialIcons a i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .navigation ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .navigation.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 0.1rem 0.5rem #ccc;
+    }
+
+    .navigation ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-text {
+        margin-bottom: 20px;
+    }
+
+    .home-img img {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .secao-projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secao-projeto .projeto-text {
+        margin-bottom: 20px;
+    }
+
+    .img-addroom {
+        margin: 0;
+        padding: 0;
+    }
+
+    .socialIcons {
+        flex-direction: column;
+    }
+
+    .socialIcons h2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .home {
+        padding: 0 5%;
+    }
+
+    .home-text p {
+        font-size: 18px;
+    }
+
+    .home-text .text-h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-text .text-h4 {
+        font-size: 0.875rem;
+    }
+
+    .home-btn {
+        padding: 10px 30px;
+    }
+
+    .secao-projeto {
+        margin: 10px 20px;
+    }
+
+    .secao-projeto h2 {
+        font-size: 1.5rem;
+    }
+
+    .secao-projeto .projeto-text p {
+        font-size: 18px;
+    }
+
+    .img-addroom img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .socialIcons h2 {
+        font-size: 0.875rem;
+    }
+
+    .socialIcons a i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        padding: 18px 10px;
+    }
+
+    .home {
+        padding: 0 2%;
+    }
+
+    .home-text p {
+        font-size: 16px;
+    }
+
+    .home-text .text-h1 {
+        font-size: 1.25rem;
+    }
+
+    .home-text .text-h4 {
+        font-size: 0.75rem;
+    }
+
+    .home-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .secao-projeto {
+        margin: 10px 10px;
+    }
+
+    .secao-projeto h2 {
+        font-size: 1.25rem;
+    }
+
+    .secao-projeto .projeto-text p {
+        font-size: 16px;
+    }
+
+    .img-addroom img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .socialIcons h2 {
+        font-size: 0.75rem;
+    }
+
+    .socialIcons a i {
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
+
+
